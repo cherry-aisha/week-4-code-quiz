@@ -32,6 +32,34 @@ function stopGame() {
     summary.textContent = "You Scored: " + score;
 }
 
+function displayQuestion () {
+    //Gets next question
+    currentQuestion++;
+    console.log("current question is " + currentQuestion);
+
+    //Check if questions have ran out
+    if(currentQuestion >= questions.length) {
+        stopGame ();
+        return;
+    }
+
+    // Use questions from qurstions Array
+    var question = questions [currentQuestion];
+    document.getElementById("question".textContent = question.title)
+
+    //Clear existing options
+    options.innerHTML = "";
+
+    // Loads choices through the questions array and bring up options
+    for (var i = 0; i < question.choices.length; i++) {
+        var option = document.createElement ("div");
+        option.textContent = question.choices[i];
+        option.onclick = onSelectAnswer;
+        option.classList.add("option");
+        options.appendChild(option);
+    }
+}
+
 //Start Game
 function onStartGame () {
     secondsLeft = 75;
@@ -56,3 +84,4 @@ function onStartGame () {
 
 // Starts game via button click
 startQuiz.addEventListener("click", onStartGame)
+}
