@@ -32,6 +32,29 @@ function stopGame() {
     summary.textContent = "You Scored: " + score;
 }
 
+//Start Game
+function onStartGame () {
+    secondsLeft = 75;
+
+    // Begin at Question 1
+    currentQuestion = 0;
+
+    // Reset the score
+    score = 0;
+
+    //Start the Timer
+    countdownTimer = setInterval(function () {
+        if (secondsLeft > 0) {
+            timer.textContent = secondsLeft;
+        } else {
+            // Stop counter and end game
+            stopGame();
+        }
+        secondsLeft --;
+
+    }, 1000);
+}
+
 function displayQuestion () {
     //Gets next question
     currentQuestion++;
@@ -60,28 +83,21 @@ function displayQuestion () {
     }
 }
 
-//Start Game
-function onStartGame () {
-    secondsLeft = 75;
+//Selecting the Answer
+function onSelectAnswer(e) {
+    var correctAnswer = questions[currenntQuestion].answer;
+    var userAnswer = e.target.textContent;
+    
+    if (correctAnswer === userAnswer) {
+        score++;
 
-    // Begin at Question 1
-    currentQuestion = 0;
+        displayMessage ('Correct!')
+    } else {
+        score --;
 
-    // Reset the score
-    score = 0;
-
-    //Start the Timer
-    countdownTimer = setInterval(function () {
-        if (secondsLeft > 0) {
-            timer.textContent = secondsLeft;
-        } else {
-            // Stop counter and end game
-            stopGame();
-        }
-        secondsLeft --;
-
-    }, 1000);
+        displayMeesage ('Incorrect')
+    }
+}
 
 // Starts game via button click
 startQuiz.addEventListener("click", onStartGame)
-}
