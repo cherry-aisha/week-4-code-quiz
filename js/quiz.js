@@ -10,4 +10,3 @@ var saveScore = document.getElementById("saveScore")
 var viewScores = document.getElementById("viewScores")
 var summary = document.getElementById("summary")
 var playAgain = document.getElementById("playAgain")
-
