@@ -10,3 +10,24 @@ var saveScore = document.getElementById("saveScore")
 var viewScores = document.getElementById("viewScores")
 var summary = document.getElementById("summary")
 var playAgain = document.getElementById("playAgain")
+
+// Set defult to 0
+var secondsLeft = 0;
+var score = 0;
+var currentQuestion = 0;
+var countdownTimer;
+
+function stopGame() {
+    //Stop Timer
+    clearInterval(countdownTimer);
+
+    //Clear the Timer
+    timer.textContent = ""
+
+    //Hide questions and show result
+    quiz.style.display = 'none';
+    result.style.display = 'flex';
+
+    //Display Score
+    summary.textContent = "You Scored: " + score;
+}
