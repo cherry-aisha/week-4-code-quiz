@@ -31,3 +31,6 @@ function stopGame() {
     //Display Score
     summary.textContent = "You Scored: " + score;
 }
+
+// Starts game via button click
+startQuiz.addEventListener("click", onStartGame)
