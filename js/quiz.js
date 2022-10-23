@@ -97,6 +97,9 @@ function onSelectAnswer(e) {
 
         displayMeesage ('Incorrect')
     }
+
+    //Bring up the next question
+    displayQuestion();
 }
 
 // Starts game via button click
