@@ -37,3 +37,9 @@ header {
     color: var(--heading-color);
 }
 
+a {
+    text-decoration: none;
+    color: var(--heading-color);
+    padding: 20px;
+}
+
