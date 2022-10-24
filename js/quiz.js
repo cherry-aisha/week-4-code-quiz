@@ -1,15 +1,19 @@
 // Quiz Components
-var welcome = document.getElementById("welcome")
-var timer = document.getElementById("timer")
 var startQuiz = document.getElementById("startQuiz")
-var quiz = document.getElementById("quiz")
-var options = document.getElementById("options")
-var message = document.getElementById("message")
-var result = document.getElementById("result")
 var saveScore = document.getElementById("saveScore")
 var viewScores = document.getElementById("viewScores")
-var summary = document.getElementById("summary")
 var playAgain = document.getElementById("playAgain")
+
+var welcome = document.getElementById("welcome")
+var quiz = document.getElementById("quiz")
+var result = document.getElementById("result")
+
+var options = document.getElementById("options")
+var message = document.getElementById("message")
+
+var timer = document.getElementById("timer")
+
+var summary = document.getElementById("summary")
 
 // Set defult to 0
 var secondsLeft = 0;
@@ -32,6 +36,21 @@ function stopGame() {
     summary.textContent = "You Scored: " + score;
 }
 
+// Score Log
+function onSaveScore(e) {
+    var intials = document.getElementByID("initials").value
+
+    //Validate the entry
+    if (initials !== "") {
+        localStorage.setItem(initials, score);
+    }
+}
+
+//To view the score
+function onViewScores(e) {
+    window.location.href = 'scores.html';
+}
+
 //Start Game
 function onStartGame () {
     secondsLeft = 75;
@@ -44,9 +63,11 @@ function onStartGame () {
 
     //Start the Timer
     countdownTimer = setInterval(function () {
+
         if (secondsLeft > 0) {
             timer.textContent = secondsLeft;
         } else {
+
             // Stop counter and end game
             stopGame();
         }
@@ -64,7 +85,7 @@ function displayQuestion () {
     if(currentQuestion >= questions.length) {
         stopGame();
         return;
-    }
+    } 
 
     // Use questions from qurstions Array
     var question = questions [currentQuestion];
