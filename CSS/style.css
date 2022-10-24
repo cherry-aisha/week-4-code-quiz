@@ -2,10 +2,9 @@
     --bg-color: #54086B;
     --heading-color: #ffff;
     --primary-text-color: #00BEC5;
-    --secondary-text-color: #ffff;
     --box-height: 650px;
     --box-width: 750px;
-    --box-shadow: #FF0BAC, 10px, 10px, 0px, 0px;
+    --box-shadow: #6e074c, 10px, 10px, 0px, 0px;
     --button-hover: #FF0BAC;
 }
 
@@ -25,6 +24,11 @@ header {
     justify-content: center;
     align-items: center;
     background-color: var(--primary-text-color);
+    margin-top: 20px;
+}
+
+h1 {
+    padding-bottom: 30px;
 }
 
 #timer {
@@ -82,18 +86,29 @@ color: var(--bg-color);
     color: hsl(206, 17%, 28%);
     font-size: 18px;
     margin: auto;
-    max-width: 800px;
+    max-width: 70%;
     padding: 30px 40px;
     margin-top: 50px;
 }
 
 .button {
-    background-color: var(--primary-text-color);
+    background-color: var(--button-hover);
     border: none;
     border-radius: 30px;
-    color: var(background-color);
+    color: var(--heading-color);
     padding: 10px 32px;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+#result {
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--primary-text-color);
 }
