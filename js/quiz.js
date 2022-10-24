@@ -38,7 +38,7 @@ function stopGame() {
 
 // Score Log
 function onSaveScore(e) {
-    var intials = document.getElementByID("initials").value
+    var initials = document.getElementById("initials").value
 
     //Validate the entry
     if (initials !== "") {
@@ -143,6 +143,6 @@ displayQuestion();
 
 // Starts game via button click
 startQuiz.addEventListener("click", onStartGame);
-savesScore.addEventListener("click", onSaveScore);
+saveScore.addEventListener("click", onSaveScore);
 viewScores.addEventListener("click", onViewScores);
 playAgain.addEventListener("click", onStartGame);
