@@ -62,13 +62,13 @@ function displayQuestion () {
 
     //Check if questions have ran out
     if(currentQuestion >= questions.length) {
-        stopGame ();
+        stopGame();
         return;
     }
 
     // Use questions from qurstions Array
     var question = questions [currentQuestion];
-    document.getElementById("question".textContent = question.title)
+    document.getElementById("question").textContent = question.title
 
     //Clear existing options
     options.innerHTML = "";
@@ -79,6 +79,7 @@ function displayQuestion () {
         option.textContent = question.choices[i];
         option.onclick = onSelectAnswer;
         option.classList.add("option");
+        
         options.appendChild(option);
     }
 }
@@ -100,6 +101,17 @@ function onSelectAnswer(e) {
 
     //Bring up the next question
     displayQuestion();
+}
+
+// Display message
+function displayMessage(msg) {
+
+    message.textContent = msg;
+
+    // Clear message
+    setTimeout(function () {
+        message.textContent = " ";
+    }, 1000);
 }
 
 // Starts game via button click
