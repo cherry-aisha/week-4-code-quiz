@@ -14,13 +14,11 @@
 <!--Header-->
     <header>
            <!--Scores-->
-        <div>
+        <div id="highscores">
             <a href="/scores.html">High Scores</a>
         </div>
            <!--Timer-->
-        <div id="timer">
-            <p>Timer</p>
-        </div>
+        <div id="timer"></div>
     </header>
 
    <!--Main Section-->
@@ -28,27 +26,20 @@
        <!--Welcome/Start Section-->
     <div id="welcome">
         <h1>Welcome To The Code Quiz!</h1>
-        <button id="startQuiz">Start Quiz</button>
+        <button id="startQuiz" class="btn">Start Quiz</button>
     </div>
        <!--Quiz Section-->
-    <div id="quiz">
-        <h2>Quiz</h2>
+    <div id="quiz" class="hidden"></div>
         <!--Questions Section-->
-        <div>
-        <h2>Questions</h2>
-        </div>
+        <div id="question"></div>
         <!--Options Section-->
-        <div id="option">
-        <p>Options</p>
-        </div>
+        <div id="options"></div>
         <!--Message Section-->
-        <div id="message">
-        <p>Message</p>
-        </div>
+        <div id="message"></div>
     </div>
     
     <!--Results Section-->
-    <div id="result">
+    <div id="result" class="hidden">
         <div>
         <h3>Results</h3>
         </div>
