@@ -22,7 +22,7 @@ header {
     height: 150px;
     display: flex;
     margin: auto;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: var(--primary-text-color);
 }
@@ -41,5 +41,16 @@ a {
     text-decoration: none;
     color: var(--heading-color);
     padding: 20px;
+}
+
+#welcome {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+padding-top: 15px;
+padding-bottom: 15px;
+font-family: Courier, sans-serif;
+font-size: 150%;
 }
 
