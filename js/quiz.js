@@ -50,32 +50,6 @@ function onSaveScore(e) {
 function onViewScores(e) {
     window.location.href = 'scores.html';
 }
-
-//Start Game
-function onStartGame () {
-    secondsLeft = 75;
-
-    // Begin at Question 1
-    currentQuestion = 0;
-
-    // Reset the score
-    score = 0;
-
-    //Start the Timer
-    countdownTimer = setInterval(function () {
-
-        if (secondsLeft > 0) {
-            timer.textContent = secondsLeft;
-        } else {
-
-            // Stop counter and end game
-            stopGame();
-        }
-        secondsLeft --;
-
-    }, 1000);
-}
-
 function displayQuestion () {
     //Gets next question
     currentQuestion++;
@@ -85,7 +59,7 @@ function displayQuestion () {
     if(currentQuestion >= questions.length) {
         stopGame();
         return;
-    } 
+    }
 
     // Use questions from qurstions Array
     var question = questions [currentQuestion];
@@ -96,6 +70,7 @@ function displayQuestion () {
 
     // Loads choices through the questions array and bring up options
     for (var i = 0; i < question.choices.length; i++) {
+
         var option = document.createElement ("div");
         option.textContent = question.choices[i];
         option.onclick = onSelectAnswer;
@@ -135,5 +110,39 @@ function displayMessage(msg) {
     }, 1000);
 }
 
+//Start Game
+function onStartGame () {
+    secondsLeft = 75;
+
+    // Begin at Question 1
+    currentQuestion = 0;
+
+    // Reset the score
+    score = 0;
+
+    //Start the Timer
+    countdownTimer = setInterval(function () {
+
+        if (secondsLeft > 0) {
+            timer.textContent = secondsLeft;
+        } else {
+            // Stop counter and end game
+            stopGame();
+        }
+        secondsLeft --;
+
+    }, 1000);
+
+welcome.style.display = 'none';
+result.style.display = 'none';
+quiz.style.display = 'flex';
+
+displayQuestion();
+
+}
+
 // Starts game via button click
-startQuiz.addEventListener("click", onStartGame)
+startQuiz.addEventListener("click", onStartGame);
+savesScore.addEventListener("click", onSaveScore);
+viewScores.addEventListener("click", onViewScores);
+playAgain.addEventListener("click", onStartGame);
