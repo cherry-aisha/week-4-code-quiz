@@ -47,10 +47,10 @@ User can select from a choice of possible answers
 High scores saved to a leaderboard, see if you can beat the winner!
 ```
 #### Preview
-![Watch the Demo] !(.assets/codequiz.gif)
+![Watch the Demo]!(./assets/codequiz.gif)
 
 #### Visit the Github Repo
-![Github Repo](https://github.com/cherry-aisha/week-4-code-quiz)
+Link to ![Github Repo](https://github.com/cherry-aisha/week-4-code-quiz)
 
 #### Visit the Page
-![Page](https://cherry-aisha.github.io/week-4-code-quiz/)
+Link to ![Page](https://cherry-aisha.github.io/week-4-code-quiz/)
