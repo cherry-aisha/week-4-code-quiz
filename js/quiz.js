@@ -82,7 +82,7 @@ function displayQuestion () {
 
 //Selecting the Answer
 function onSelectAnswer(e) {
-    var correctAnswer = questions[currenntQuestion].answer;
+    var correctAnswer = questions[currentQuestion].answer;
     var userAnswer = e.target.textContent;
     
     if (correctAnswer === userAnswer) {
@@ -92,7 +92,7 @@ function onSelectAnswer(e) {
     } else {
         score --;
 
-        displayMeesage ('Incorrect')
+        displayMessage ('Incorrect')
     }
 
     //Bring up the next question
