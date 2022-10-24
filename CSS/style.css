@@ -1,0 +1,14 @@
+:root {
+    --bg-color: #54086B;
+    --heading-color: #ffff;
+    --primary-text-color: #00BEC5;
+    --secondary-text-color: #ffff;
+    --box-height: 650px;
+    --box-width: 750px;
+    --box-shadow: #FF0BAC, 10px, 10px, 0px, 0px;
+    --button-hover: #FF0BAC;
+}
+
+body {
+    
+}
