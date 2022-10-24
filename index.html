@@ -26,6 +26,7 @@
    <!--Main Section-->
    <main>
        <!--Welcome/Start Section-->
+    <div class="card">
     <div id="welcome">
         <h1>Welcome To The Code Quiz!</h1>
         <button id="startQuiz" class="btn">Start Quiz</button>
@@ -39,17 +40,19 @@
         <!--Message Section-->
         <div id="message"></div>
     </div>
+</div>
+    </main>
     
     <!--Results Section-->
-    <div id="result" class="hidden">
+    <div id="result" class="card" class="hidden">
         <div>
         <h3>Results</h3>
         </div>
-        <button id="viewScores">View All High Scores</button>
+        <button id="viewScores" class="button">View All High Scores</button>
         <input id= "initials" type="text" placeholder="Enter Your Initials"/>
-        <button id="saveScore">Save Your Score</button>
+        <button id="saveScore" class="button">Save Your Score</button>
         <p id="summary">Summary</p>
-        <button id="playAgain">Play Again</button>
+        <button id="playAgain" class="button">Play Again</button>
     </div>
    </main>
 </body>

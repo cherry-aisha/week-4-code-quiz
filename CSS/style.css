@@ -18,7 +18,7 @@ body {
     }
 
 header {
-    width: 100%;
+    width: 70%;
     height: 150px;
     display: flex;
     margin: auto;
@@ -52,5 +52,48 @@ padding-top: 15px;
 padding-bottom: 15px;
 font-family: Courier, sans-serif;
 font-size: 150%;
+color: var(--bg-color);
 }
 
+#h1 {
+    padding: 30px;
+}
+
+#startQuiz {
+    background-color: var(--button-hover);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.startQuiz:hover {
+    background-color: var(--primary-text-color);
+  }
+
+.card {
+    background-color: var(--bg-color)
+    border-radius: 5px;
+    border-width: 1px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+    color: hsl(206, 17%, 28%);
+    font-size: 18px;
+    margin: auto;
+    max-width: 800px;
+    padding: 30px 40px;
+    margin-top: 50px;
+}
+
+.button {
+    background-color: var(--primary-text-color);
+    border: none;
+    border-radius: 30px;
+    color: var(background-color);
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
