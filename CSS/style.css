@@ -10,5 +10,30 @@
 }
 
 body {
-    
+    background-image: ("../assets/codingquiz.png");
+    background-position: center;
+    background-repeat: repeat;
+    height: 1vh;
+    font-family: AvantGardGothE, sans-serif;
+    }
+
+header {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-text-color);
 }
+
+#timer {
+    min-height: 100 px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: right;
+    color: var(--heading-color);
+}
+
