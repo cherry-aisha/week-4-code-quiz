@@ -15,6 +15,7 @@ var timer = document.getElementById("timer")
 
 var summary = document.getElementById("summary")
 
+
 // Set defult to 0
 var secondsLeft = 0;
 var score = 0;
@@ -89,6 +90,7 @@ function onSelectAnswer(e) {
         score++;
 
         displayMessage ('Correct!')
+        
     } else {
         score --;
 
