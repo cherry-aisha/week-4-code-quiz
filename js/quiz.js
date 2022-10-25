@@ -62,7 +62,7 @@ function displayQuestion () {
         return;
     }
 
-    // Use questions from qurstions Array
+    // Use questions from questions Array
     var question = questions [currentQuestion];
     document.getElementById("question").textContent = question.title
 

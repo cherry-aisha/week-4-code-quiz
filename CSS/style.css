@@ -4,12 +4,13 @@
     --primary-text-color: #00BEC5;
     --box-height: 650px;
     --box-width: 750px;
-    --box-shadow: #6e074c, 10px, 10px, 0px, 0px;
-    --button-hover: #FF0BAC;
+    --plum: #6e074c, 10px, 10px, 0px, 0px;
+    --bright-pink: #FF0BAC;
+
 }
 
 body {
-    background-image: ("../assets/codingquiz.png");
+    background-image: ("./assets/codingquiz.png");
     background-position: center;
     background-repeat: repeat;
     height: 1vh;
@@ -64,7 +65,7 @@ color: var(--bg-color);
 }
 
 #startQuiz {
-    background-color: var(--button-hover);
+    background-color: var(--bright-pink);
     border: none;
     border-radius: 30px;
     color: white;
@@ -74,9 +75,9 @@ color: var(--bg-color);
     font-size: 16px;
 }
 
-.startQuiz:hover {
-    background-color: var(--primary-text-color);
-  }
+#startQuiz:hover {
+    background-color: var(--bg-color);
+}
 
 .card {
     background-color: var(--bg-color)
@@ -92,7 +93,7 @@ color: var(--bg-color);
 }
 
 .button {
-    background-color: var(--button-hover);
+    background-color: var(--bright-pink);
     border: none;
     border-radius: 30px;
     color: var(--heading-color);
@@ -100,15 +101,37 @@ color: var(--bg-color);
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    margin-left: 10px;
-    margin-right: 10px;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--plum);
+    margin: 15px 15px 15px 15px;
+}
+
+.button:hover {
+    background-color: var(--bg-color);
+  }
+
+#result-card {
+    display: flex;
+    margin: auto;
+    justify-content: relative;
+    background-color: var(--primary-text-color);
 }
 
 #result {
     display: flex;
+    flex-wrap: wrap;
     margin: auto;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    background-color: var(--primary-text-color);
+    padding: 15px 15px 15px 15px;
+    margin: 15px 15px 15px 15px;
+}
+
+#question {
+    line-height: 30px;
+    font-weight: 600;
+    font-family: Courier, sans-serif;
+}
+
+#question.choices {
+    line-height: 20px;
 }
