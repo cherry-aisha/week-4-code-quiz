@@ -1,4 +1,5 @@
 :root {
+    --coding-font: Courier, sans-serif;
     --bg-color: #54086B;
     --heading-color: #ffff;
     --primary-text-color: #00BEC5;
@@ -6,11 +7,10 @@
     --box-width: 750px;
     --plum: #6e074c, 10px, 10px, 0px, 0px;
     --bright-pink: #FF0BAC;
-
 }
 
 body {
-    background-image: ("./assets/codingquiz.png");
+    background-image: ("../assets/codingquiz.png");
     background-position: center;
     background-repeat: repeat;
     height: 1vh;
@@ -55,7 +55,7 @@ justify-content: space-around;
 align-items: center;
 padding-top: 15px;
 padding-bottom: 15px;
-font-family: Courier, sans-serif;
+font-family: var(--coding-font);
 font-size: 150%;
 color: var(--bg-color);
 }
@@ -103,6 +103,16 @@ color: var(--bg-color);
     font-size: 16px;
     box-shadow: var(--plum);
     margin: 15px 15px 15px 15px;
+}
+
+#initials {
+    border-radius: 10px;
+    border-color: var(--bg-color);
+    justify-content: center;
+    background-color: var(--bright-pink);
+    font-family:var(--coding-font);
+    padding: 5px;
+    color: var(--heading-color);
 }
 
 .button:hover {
