@@ -85,14 +85,18 @@ function displayQuestion () {
 function onSelectAnswer(e) {
     var correctAnswer = questions[currentQuestion].answer;
     var userAnswer = e.target.textContent;
-    
+    var correct = new Audio ("../sfx/correct.wav");
+    var incorrect = new Audio ("../sfx/incorrect.wav");
+
     if (correctAnswer === userAnswer) {
         score++;
+        correct.play()
 
         displayMessage ('Correct!')
         
     } else {
         score --;
+        incorrect.play()
 
         displayMessage ('Incorrect')
     }

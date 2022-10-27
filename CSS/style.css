@@ -10,9 +10,10 @@
 }
 
 body {
-    background-image: ("../assets/codingquiz.png");
+    background-image: url("../assets/codingquiz.png");
     background-position: center;
     background-repeat: repeat;
+    background-size: 300px 100px;
     height: 1vh;
     font-family: AvantGardGothE, sans-serif;
     }
