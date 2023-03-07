@@ -120,6 +120,11 @@ color: var(--bg-color);
     background-color: var(--bg-color);
   }
 
+  .button:active{
+    background-color: var(--bg-color);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
 #result-card {
     display: flex;
     margin: auto;

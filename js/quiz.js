@@ -81,7 +81,7 @@ function displayQuestion () {
     }
 }
 
-//Selecting the Answer
+//When the answer is selected
 function onSelectAnswer(e) {
     var correctAnswer = questions[currentQuestion].answer;
     var userAnswer = e.target.textContent;
@@ -91,19 +91,19 @@ function onSelectAnswer(e) {
     if (correctAnswer === userAnswer) {
         score++;
         correct.play()
-
         displayMessage ('Correct!')
-        
     } else {
-        score --;
+        // Deduct 10 seconds from the timer for a wrong answer
+        secondsLeft -= 10;
+        score--;
         incorrect.play()
-
         displayMessage ('Incorrect')
     }
 
     //Bring up the next question
     displayQuestion();
 }
+
 
 // Display message
 function displayMessage(msg) {
@@ -128,15 +128,14 @@ function onStartGame () {
 
     //Start the Timer
     countdownTimer = setInterval(function () {
-
         if (secondsLeft > 0) {
             timer.textContent = secondsLeft;
+            secondsLeft--;
         } else {
             // Stop counter and end game
             stopGame();
+            clearInterval(countdownTimer); // Clear the interval to prevent negative values
         }
-        secondsLeft --;
-
     }, 1000);
 
 welcome.style.display = 'none';
