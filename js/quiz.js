@@ -49,7 +49,7 @@ function onSaveScore(e) {
 
 //To view the score
 function onViewScores(e) {
-    window.location.href = 'scores.js';
+    window.location.href = 'scores.html';
 }
 function displayQuestion () {
     //Gets next question
@@ -96,6 +96,9 @@ function onSelectAnswer(e) {
         // Deduct 10 seconds from the timer for a wrong answer
         secondsLeft -= 10;
         score--;
+        if (score < 0) {
+            score = 0;
+        }
         incorrect.play()
         displayMessage ('Incorrect')
     }
@@ -103,6 +106,7 @@ function onSelectAnswer(e) {
     //Bring up the next question
     displayQuestion();
 }
+
 
 
 // Display message

@@ -26,6 +26,7 @@ User can select from a choice of possible answers
 ```
 High scores saved to a leaderboard, see if you can beat the winner!
 ```
+
 #### Preview
 ![Watch the Demo](/assets/codequiz.gif)
 

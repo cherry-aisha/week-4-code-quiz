@@ -81,6 +81,25 @@ color: var(--bg-color);
     background-color: var(--bg-color);
 }
 
+.option {
+    display: block;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid var(--heading-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.option:hover {
+    font-weight: bolder;
+    display: block;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid var(--heading-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .card {
     background-color: var(--heading-color);
     border-radius: 5px;
