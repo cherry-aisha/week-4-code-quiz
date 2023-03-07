@@ -7,6 +7,7 @@
     --box-width: 750px;
     --plum: #6e074c, 10px, 10px, 0px, 0px;
     --bright-pink: #FF0BAC;
+    --dark:rgb(45, 43, 47);
 }
 
 body {
@@ -110,7 +111,7 @@ color: var(--bg-color);
     border-radius: 10px;
     border-color: var(--bg-color);
     justify-content: center;
-    background-color: var(--bright-pink);
+    background-color: var(--dark);
     font-family:var(--coding-font);
     padding: 5px;
     color: var(--heading-color);

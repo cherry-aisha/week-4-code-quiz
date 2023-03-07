@@ -49,7 +49,7 @@ function onSaveScore(e) {
 
 //To view the score
 function onViewScores(e) {
-    window.location.href = 'scores.html';
+    window.location.href = 'scores.js';
 }
 function displayQuestion () {
     //Gets next question
